@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Optimization | DAA Project</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <div class="floating-panel">
+        <div class="header">
+            <h2><i class="fas fa-route"></i> Route Optimizer</h2>
+            <p class="subtitle">DAA Mini Project 2025</p>
+        </div>
+
+        <form id="routeForm">
+            <div class="input-group">
+                <i class="fas fa-map-marker-alt start-icon"></i>
+                <input type="text" id="start" required placeholder="Start (Lat, Lng)">
+            </div>
+            
+            <div class="input-group">
+                <i class="fas fa-flag-checkered end-icon"></i>
+                <input type="text" id="end" required placeholder="End (Lat, Lng)">
+            </div>
+
+            <button type="submit" id="findBtn">
+                <i class="fas fa-search-location"></i> Find Best Route
+            </button>
+        </form>
+
+        <div class="stats-container" id="stats">
+            <div class="stat-box">
+                <span class="label">Distance</span>
+                <span class="value" id="distance-val">0 km</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">Est. Time</span>
+                <span class="value" id="time-val">0 min</span>
+            </div>
+        </div>
+
+        <div class="team-info">
+            <p><strong>Devvart Kumar</strong> (20230802325)</p>
+            <p><strong>Arman Ansari</strong> (20230802312)</p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

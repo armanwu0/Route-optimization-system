@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Full Screen Map */
+#map {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Floating Control Panel */
+.floating-panel {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 350px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Above the map */
+    backdrop-filter: blur(10px);
+}
+
+.header h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* Input Styling */
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7f8c8d;
+}
+
+.input-group .start-icon { color: #27ae60; }
+.input-group .end-icon { color: #e74c3c; }
+
+input {
+    width: 100%;
+    padding: 12px 15px 12px 40px; /* Space for icon */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Stats Display */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.stat-box {
+    text-align: center;
+    width: 48%;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.stat-box .label {
+    display: block;
+    font-size: 0.75rem;
+    color: #7f8c8d;
+}
+
+.stat-box .value {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* Footer */
+.team-info {
+    margin-top: 20px;
+    font-size: 0.75rem;
+    color: #bdc3c7;
+    text-align: center;
+}
